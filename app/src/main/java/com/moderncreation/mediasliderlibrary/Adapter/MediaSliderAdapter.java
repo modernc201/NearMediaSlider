@@ -5,7 +5,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import com.google.android.youtube.player.YouTubePlayer;
+import com.moderncreation.mediasliderlibrary.SimpleImageFragment;
 import com.moderncreation.mediasliderlibrary.View.MediaSliderItem;
+import com.moderncreation.mediasliderlibrary.Youtube.YouTubePlayerSupportCustomFragment;
 
 import java.util.ArrayList;
 import java.util.List;
