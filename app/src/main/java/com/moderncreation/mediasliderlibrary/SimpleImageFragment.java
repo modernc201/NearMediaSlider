@@ -3,6 +3,7 @@ package com.moderncreation.mediasliderlibrary;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,9 @@ public class SimpleImageFragment extends Fragment implements MediaSliderItem {
         Picasso.with(getContext())
                 .load(sURL)
                 .into(imageView);
+
+
+        Log.e("SimpleImageFragment", sURL);
         return binding.getRoot();
 
     }
