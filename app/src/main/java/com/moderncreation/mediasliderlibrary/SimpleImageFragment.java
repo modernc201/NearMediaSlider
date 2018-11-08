@@ -1,6 +1,7 @@
 package com.moderncreation.mediasliderlibrary;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -55,9 +56,18 @@ public class SimpleImageFragment extends Fragment implements MediaSliderItem {
                 .into(imageView);
 
 
-        Log.e("SimpleImageFragment", sURL);
+
         return binding.getRoot();
 
     }
 
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        Picasso.with(getContext())
+                .load(sURL)
+                .into(imageView);
+        Log.e("SimpleImageFragment", sURL);
+    }
 }

@@ -30,7 +30,7 @@ public class MediaSliderAdapter extends FragmentStatePagerAdapter implements Ico
         mChangeListener = new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+               // ((SimpleImageFragment)fragments.get(position)).onLoadImage();
             }
 
             @Override
@@ -48,6 +48,8 @@ public class MediaSliderAdapter extends FragmentStatePagerAdapter implements Ico
                     YouTubePlayerSupportCustomFragment mFregment = (YouTubePlayerSupportCustomFragment) fragments.get(position);
                     mFregment.onLoad();
                 }
+
+
             }
 
             @Override
