@@ -19,11 +19,12 @@ public class MediaSliderAdapter extends FragmentStatePagerAdapter implements Ico
     private List<YouTubePlayer> players = new ArrayList<>();
     private ViewPager.OnPageChangeListener mChangeListener;
     private boolean isInit = true;
+    private int placeholderImage;
 
-
-    public MediaSliderAdapter(FragmentManager fm) {
+    public MediaSliderAdapter(FragmentManager fm, int placeholderImage) {
         super(fm);
         setChangeListener();
+        this.placeholderImage = placeholderImage;
     }
 
     private void setChangeListener() {
@@ -80,12 +81,14 @@ public class MediaSliderAdapter extends FragmentStatePagerAdapter implements Ico
 
         if (MediaSliderItem.MEDIA.IMAGE == type) {
             f = new SimpleImageFragment();
+            ((SimpleImageFragment)f).setPlaceholderImage(placeholderImage);
         } else if (MediaSliderItem.MEDIA.VIDEO == type) {
             f = new YouTubePlayerSupportCustomFragment();
         }
 
 
         ((MediaSliderItem) f).setURL(url);
+
         fragments.add(f);
 
         notifyDataSetChanged();
