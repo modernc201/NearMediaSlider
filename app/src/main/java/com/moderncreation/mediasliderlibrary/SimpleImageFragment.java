@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SimpleImageFragment extends Fragment implements MediaSliderItem {
+abstract public class SimpleImageFragment extends Fragment implements MediaSliderItem {
 
     private String sURL;
     public final MEDIA MEDIA_TYPE;
@@ -51,11 +51,11 @@ public class SimpleImageFragment extends Fragment implements MediaSliderItem {
         FragmentSimpleImageBinding binding = FragmentSimpleImageBinding.inflate(inflater, container, false);
         imageView = binding.sliderImg;
 
-        Picasso.with(getContext())
-                .load(sURL)
-                .into(imageView);
-
-
+//        Picasso.with(getContext())
+//                .load(sURL)
+//                .into(imageView);
+//
+//
 
         return binding.getRoot();
 
@@ -65,9 +65,7 @@ public class SimpleImageFragment extends Fragment implements MediaSliderItem {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        Picasso.with(getContext())
-                .load(sURL)
-                .into(imageView);
-        Log.e("SimpleImageFragment", sURL);
     }
+
+
 }

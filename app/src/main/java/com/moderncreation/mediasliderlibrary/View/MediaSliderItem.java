@@ -14,4 +14,6 @@ public interface MediaSliderItem {
         VIDEO
     }
 
+    abstract void imageLoad();
+
 }
