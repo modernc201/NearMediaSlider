@@ -69,6 +69,9 @@ import com.squareup.picasso.Picasso;
 
     }
 
+    public ImageView getImageView() {
+        return imageView;
+    }
 
     @Override
     public void onAttach(Context context) {
