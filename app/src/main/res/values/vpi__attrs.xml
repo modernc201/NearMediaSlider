@@ -18,6 +18,7 @@
 <resources>
     <declare-styleable name="ViewPagerIndicator">
         <!-- Style of the circle indicator. -->
+
         <attr name="vpiCirclePageIndicatorStyle" format="reference"/>
         <!-- Style of the icon indicator's views. -->
         <attr name="vpiIconPageIndicatorStyle" format="reference"/>
