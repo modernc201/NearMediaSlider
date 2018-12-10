@@ -62,6 +62,7 @@ import com.squareup.picasso.Picasso;
 
         Picasso.with(getContext())
                 .load(sURL)
+                .fit()
                 .placeholder(getPlaceholderImage())
                 .into(imageView);
 
